@@ -1,23 +1,75 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      base_title: "MLOG"
+    footer:
+      about: "About"
+      contact: "Contact"
+    header:
+      account: "Account"
+      help: "Help"
+      home: "Home"
+      login: "Login"
+      logout: "Log out"
+      profile: "Profile"
+      mlog: "MLOG"
+      settings: " Settings"
+      users: "Users"
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+      success: "Welcome to the MLOG"
+    new:
+      email: "Email"
+      login: "Log in"
+      new: "New user?"
+      password: "Password"
+      remember_me: "Remember me on this computer"
+      signup: "Sign up now!"
+  shared:
+    error_messages:
+      error: "Error"
+      the: "The form contains "
+  static_pages:
+    about:
+      about: "About"
+    contact:
+      contact: "Contact"
+    help:
+      help: "Help"
+    home:
+      signup: "Sign up now!"
+      wehope: "We hope that my page will be useful with you"
+      welcome: "Welcome to the MLOG"
+  users:
+    create:
+      error: "Error!"
+      welcome: "Welcome to the MLOG!"
+    edit:
+      edit_user: "Edit user"
+      danger: "Please log in."
+      save: "Save changes"
+      update: "Update your profile"
+    destroy:
+      deleted: "User deleted!"
+      er: "Error delete!"
+    form:
+      change: "change"
+      confimation: "Confirmation"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+    index:
+      all_user: "All users"
+    new:
+      signup: "Sign up"
+      submit: "Create my account"
+    show:
+      email: "Email: "
+      name: "Name: "
+    user:
+      delete: "Delete"
+      sure: "You sure?"
+    update:
+      error: "Error!"
+      success: "Profile updated!"
