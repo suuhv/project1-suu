@@ -38,6 +38,7 @@ en:
     help:
       help: "Help"
     home:
+      home: "Home"
       signup: "Sign up now!"
       wehope: "We hope that my page will be useful with you"
       welcome: "Welcome to the MLOG"
