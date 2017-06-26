@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: :show
+  before_action :logged_in_user, except: [:show, :new, :create]
+  before_action :load_user, except: [:index, :new, :create]
+  before_action :correct_user, only: [:edit, :update]
+
+  def index
+    @users = User.select(:id, :name, :email).order(:id).paginate page: params[:page],
+      per_page: Settings.user.page_size
+  end
 
   def new
     @user = User.new
@@ -18,19 +25,47 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t ".success"
+      redirect_to @user
+    else
+      flash.now[:danger] = t ".error"
+      render :edit
+    end
+  end
+
   def show
+  end
+
+  def destroy
   end
 
   private
 
-    def user_params
-      params.require(:user).permit :name, :email, :password, :password_confirmation
+  def user_params
+    params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+
+    return if @user
+    render file: "public/404.html", layout: false
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t ".danger"
+      redirect_to login_url
     end
+  end
 
-    def load_user
-      @user = User.find_by id: params[:id]
-
-      return if @user
-      render file: "public/404.html", layout: false
-   end
+  def correct_user
+    redirect_to root_url unless @user.current_user? current_user
+  end
 end
