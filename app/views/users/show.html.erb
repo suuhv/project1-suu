@@ -4,8 +4,17 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= t ".name" %><%= @user.name %><br>
+        <%= @user.name %><br>
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.microposts.any? %>
+      <h3><%= t ".micropost" %>(<%= @user.microposts.size %>)</h3>
+      <%= will_paginate @microposts %>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+    <% end %>
+  </div>
 </div>
