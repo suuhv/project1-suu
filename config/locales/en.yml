@@ -30,6 +30,11 @@ en:
     error_messages:
       error: "Error"
       the: "The form contains "
+    user_info:
+      micropost: "micropost"
+    micropost_form:
+      compose: "Compose new micropost..."
+      post: "Post"
   static_pages:
     about:
       about: "About"
@@ -42,6 +47,7 @@ en:
       signup: "Sign up now!"
       wehope: "We hope that my page will be useful with you"
       welcome: "Welcome to the MLOG"
+      micropost_feed: "Micropost Feed"
   users:
     create:
       error: "Error!"
@@ -74,3 +80,15 @@ en:
     update:
       error: "Error!"
       success: "Profile updated!"
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+      delete: "Delete"
+      sure: "You sure?"
+    created: "Micropost created!"
+    destroy:
+      delete: "Micropost deleted"
+    should_be_less: "should be less than 5MB"
+    smaller: "Maximum file size is 5MB. Please choose a smaller file."
+

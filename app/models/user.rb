@@ -1,7 +1,9 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token
 
-  before_save {email.downcase!}
+  before_save :downcase_email
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name, presence: true, length: {maximum: Settings.user.name_maximum}
@@ -45,5 +47,15 @@ class User < ApplicationRecord
 
   def current_user? user
     self == user
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
+  private
+
+  def downcase_email
+    email.downcase!
   end
 end
