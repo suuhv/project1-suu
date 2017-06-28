@@ -1,9 +1,10 @@
 <%= form_for [micropost, micropost.comments.build], remote: true do |f| %>
   <div class="input-group">
-    <%= f.text_field :content, placeholder: "Add comment",
+    <%= f.text_field :content, placeholder: t(".add"),
       class: "form-control comment-field" %>
+      <%= f.hidden_field :micropost_id, value: micropost.id %>
       <div class="input-group-btn">
-        <%= f.submit "Comment", class: "btn btn-default" %>
+        <%= f.submit t(".comment"), class: "btn btn-default" %>
       </div>
     </div>
 <% end %>

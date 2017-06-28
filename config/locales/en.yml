@@ -1,15 +1,24 @@
 en:
+  comments:
+    comment:
+      edit: "Edit"
+      delete: "Delete"
+    form:
+      add: "Add comment"
+      comment: "Comment"
   layouts:
     application:
       base_title: "MLOG"
     footer:
       about: "About"
       contact: "Contact"
+      author: "@author: "
+      name: "Ha Suu"
     header:
       account: "Account"
       help: "Help"
       home: "Home"
-      signin: "Sign in"
+      signin: "Log in"
       logout: "Log out"
       profile: "Profile"
       mlog: "MLOG"
@@ -34,8 +43,11 @@ en:
     user_info:
       micropost: "micropost"
     micropost_form:
+      content: "Content:"
       compose: "Compose new micropost..."
       post: "Post"
+      title: "Title:"
+      add_title: "Add title..."
     stats:
       following: "following"
       followers: "followers"
@@ -47,6 +59,8 @@ en:
     help:
       help: "Help"
     home:
+      login: "Log in"
+      remember_me: "Remember me"
       home: "Home"
       signup: "Sign up now!"
       it_free: "It's free and always will be."
