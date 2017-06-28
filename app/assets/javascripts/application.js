@@ -18,3 +18,7 @@
 //= require i18n/translations
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+  $('#message-appli').fadeOut(2000);
+})

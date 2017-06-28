@@ -1,5 +1,6 @@
 class Micropost < ApplicationRecord
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   scope :order_by_desc, ->{order created_at: :desc}
   mount_uploader :picture, PictureUploader
