@@ -4,6 +4,7 @@ user:
   password_minimum: 6
   gravatar_size: 80
   gravatar_size_50: 50
+  gravatar_size_30: 30
   page_size: 10
   faker_user_number: 99
   time_save: 2

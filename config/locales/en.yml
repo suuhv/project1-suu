@@ -9,12 +9,13 @@ en:
       account: "Account"
       help: "Help"
       home: "Home"
-      login: "Login"
+      signin: "Sign in"
       logout: "Log out"
       profile: "Profile"
       mlog: "MLOG"
       settings: " Settings"
       users: "Users"
+      signup: "Sign up"
   sessions:
     create:
       invalid: "Invalid email/password combination"
@@ -35,6 +36,9 @@ en:
     micropost_form:
       compose: "Compose new micropost..."
       post: "Post"
+    stats:
+      following: "following"
+      followers: "followers"
   static_pages:
     about:
       about: "About"
@@ -45,7 +49,7 @@ en:
     home:
       home: "Home"
       signup: "Sign up now!"
-      wehope: "We hope that my page will be useful with you"
+      it_free: "It's free and always will be."
       welcome: "Welcome to the MLOG"
       micropost_feed: "Micropost Feed"
   users:
@@ -69,8 +73,8 @@ en:
     index:
       all_user: "All users"
     new:
-      signup: "Sign up"
-      submit: "Create my account"
+      signup: "Create an account"
+      submit: "Create an account"
     show:
       email: "Email: "
       name: "Name: "
@@ -80,6 +84,14 @@ en:
     update:
       error: "Error!"
       success: "Profile updated!"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    following:
+      following: "following"
+    followers:
+      followers: "followers"
   microposts:
     micropost:
       posted: "Posted"

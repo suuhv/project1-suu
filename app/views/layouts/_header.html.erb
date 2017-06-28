@@ -1,21 +1,23 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <%= link_to t(".mlog"), root_path, id: "logo" %>
-    <nav>
+    <div class="navbar-header">
+      <%= link_to t(".mlog"), root_path, id: "logo" %>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-2">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to root_path do %>
-            <span class="glyphicon glyphicon-home"></span>
-            <%= t ".home" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to help_path do %>
-            <span class="glyphicon glyphicon-question-sign"></span>
-            <%= t ".help" %>
-          <% end %>
-        </li>
         <% if logged_in? %>
+          <li>
+            <%= link_to root_path do %>
+              <span class="glyphicon glyphicon-home"></span>
+              <%= t ".home" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to help_path do %>
+              <span class="glyphicon glyphicon-question-sign"></span>
+              <%= t ".help" %>
+            <% end %>
+          </li>
           <li>
             <%= link_to users_path do %>
               <span class="glyphicon glyphicon-briefcase"></span>
@@ -49,9 +51,18 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to t(".login"), login_path %></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to t(".signup"), signup_path,
+                class: "btn btn-default btn-outline btn-circle collapsed" %>
+            </li>
+            <li>
+              <%= link_to t(".signin"), login_path,
+                class: "btn btn-default btn-outline btn-circle collapsed" %>
+            </li>
+          </ul>
         <% end %>
       </ul>
-    </nav>
+    </div>
   </div>
 </header>
