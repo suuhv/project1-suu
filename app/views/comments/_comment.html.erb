@@ -8,12 +8,12 @@
       <div class="text-left">
       <%= time_ago_in_words(comment.created_at) %>
       </div>
-      <div class="text-right">
+      <div class="text-right edit-delete">
         <% if current_user.current_user? comment.user ||
           current_user.current_user?(micropost.user) %>
-            <%= link_to "Edit", "#" %>
-            <%= link_to "Delete", [comment.micropost, comment],
-              method: :delete, remote: true, data: {confirm: "You sure!"},class: "delete" %>
+            <%= link_to t(".edit"), "#" %>
+            <%= link_to t(".delete"), [comment.micropost, comment],
+              method: :delete, remote: true, class: "delete" %>
         <% end %>
       </div>
     </small>

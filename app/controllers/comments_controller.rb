@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
   before_action :find_micropost, only: [:create]
-  before_action :find_comment, only: [:destroy]
+  before_action :find_comment, only: [:destroy, :create]
 
   def create
-    @comment = @micropost.comments.build comment_params
-    @comment.user_id = current_user.id
+    @comment = current_user.comments.build comment_params
     if @comment.save
       render json: {status: :success, html: render_to_string(@comment)}
     else
@@ -25,7 +24,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params[:comment].permit(:content)
+    params[:comment].permit(:content, :micropost_id)
   end
 
   def find_comment

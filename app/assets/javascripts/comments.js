@@ -10,8 +10,9 @@ $(document).ready(function(){
       data: params,
     })
     .done(function(response) {
-      $('.ds').append(response.html);
+      self.closest('.media-body').find('.ds').append(response.html);
       $('.comment-field').val('');
+      $(":submit").removeAttr("disabled");
     })
     .fail(function() {
       console.log('error');

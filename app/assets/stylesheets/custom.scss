@@ -34,6 +34,11 @@ textarea {
   }
 }
 
+.home-login {
+  position: relative;
+  left: 55px;
+  top: 20px;
+}
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -73,6 +78,18 @@ p {
     color: $white;
     text-decoration: none;
   }
+}
+
+.btn.btn-circle {
+  border-radius: 50px;
+}
+
+.navbar-nav.navbar-right .btn {
+  position: relative;
+  z-index: 2;
+  padding: 4px 20px;
+  margin: 10px auto;
+  transition: transform 0.3s;
 }
 
 /* footer */
@@ -276,4 +293,14 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.content-ls {
+  overflow: hidden;
+  display: block;
+}
+
+.edit-delete {
+  position: absolute;
+  right: 20px;
 }

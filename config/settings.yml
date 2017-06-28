@@ -9,7 +9,8 @@ user:
   faker_user_number: 99
   time_save: 2
 post:
-  content_length: 140
+  tital_length: 140
+  content_length: 1000
   size: 50
   picture_size: 5
   picture_size_width: 400

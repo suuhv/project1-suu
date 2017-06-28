@@ -72,7 +72,7 @@ class User < ApplicationRecord
   end
 
   def following? other_user
-    following.include? other_user
+    following.include?(other_user)
   end
 
   private
